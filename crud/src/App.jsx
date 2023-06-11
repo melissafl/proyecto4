@@ -19,6 +19,9 @@ const App = () => {
   const [formUpdate, setFormUpdate] = useState (false)
   const [item, setItem] = useState(null)
 
+  const autor = import.meta.env.VITE_NAME;
+  console.log(autor);
+
   const createUser = async() =>{
     await addDoc(userCollectionRef, {nombre:name, correo:mail, telefono:phone})
     getUsers()  
